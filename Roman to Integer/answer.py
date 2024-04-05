@@ -19,6 +19,14 @@ class Solution(object):
         for i in range(len(s) - 1, -1, -1):
             value = roman_values[s[i]]
 
+            if i < len(s) - 1 and roman_values[s[i + 1]] > value:
+                result -= value
+            else:
+                result += value
 
-# solution = Solution()
-# solution.romanToInt('XX')
+        return result
+
+
+# Test
+solution = Solution()
+solution.romanToInt('XXX')
