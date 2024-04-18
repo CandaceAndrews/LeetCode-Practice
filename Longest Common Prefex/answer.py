@@ -7,9 +7,13 @@ class Solution(object):
         if not strs:
             return ""
 
-        for i, char in enumerate(str[0]):
+        for i, char in enumerate(strs[0]):
             for word in strs[1:]:
                 if i >= len(word) or char != word[i]:
                     return strs[0][:i]
 
         return strs[0]
+
+
+solution = Solution()
+print(solution.longestCommonPrefix(["flower", "flow", "flight"]))
