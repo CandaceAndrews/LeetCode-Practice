@@ -15,5 +15,9 @@ class Solution(object):
         return strs[0]
 
 
+# Test cases
 solution = Solution()
-print(solution.longestCommonPrefix(["flower", "flow", "flight"]))
+print(solution.longestCommonPrefix(
+    ["flower", "flow", "flight"]))
+print(solution.longestCommonPrefix(
+    ["dog", "racecar", "car"]))
