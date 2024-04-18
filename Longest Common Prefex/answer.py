@@ -4,9 +4,12 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
-        for index, element in enumerate(strs):
-            print(index, element)
+        if not strs:
+            return ""
 
+        for i, char in enumerate(str[0]):
+            for word in strs[1:]:
+                if i >= len(word) or char != word[i]:
+                    return strs[0][:i]
 
-solution = Solution()
-solution.longestCommonPrefix(["flower", "flow", "flight"])
+        return strs[0]
