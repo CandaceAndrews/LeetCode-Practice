@@ -4,11 +4,22 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-    pairs = {
-        "(": ")",
-        "[": "]",
-        "{": "}"
-    }
+        stack = []
 
-    for letter in s:
-        if letter in pairs:
+        mapping = {
+            "(": ")",
+            "[": "]",
+            "{": "}"
+        }
+
+        for char in s:
+            if char in mapping:
+                stack.append(char)
+            elif stack and mapping[stack[-1]] == char:
+                stack.pop()
+            else:
+                return False
+        return not stack
+
+
+print(Solution().isValid("()"))
