@@ -4,3 +4,11 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
+    pairs = {
+        "(": ")",
+        "[": "]",
+        "{": "}"
+    }
+
+    for letter in s:
+        if letter in pairs:
