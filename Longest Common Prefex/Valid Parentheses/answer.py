@@ -22,4 +22,4 @@ class Solution(object):
         return not stack
 
 
-print(Solution().isValid("()"))
+print(Solution().isValid("([])"))
